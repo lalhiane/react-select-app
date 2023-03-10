@@ -1,0 +1,99 @@
+.container {
+    position: relative;
+    width: 25em;
+    min-height: 3em;
+    padding: 1em;
+    border: .15em solid #999;
+    border-radius: 0.25em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.container:focus {
+    border-color: hsl(200, 100%, 50%);
+}
+
+.current {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.option-btn {
+    padding: .205em .5em;
+    display: flex;
+    align-items: center;
+    gap: .15em;
+    background-color: transparent;
+    border: .15em solid #999;
+    border-radius: .25em;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background-color: hsl(0, 100%, 90%);
+    border-color: hsl(0, 100%, 50%);
+}
+
+.del-option {
+    font-size: 1.5em;
+    color: #999;
+}
+
+.option-btn:hover .del-option {
+    color: hsl(0, 100%, 50%);
+}
+
+.clear-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #999;
+    cursor: pointer;
+}
+
+.divider {
+    width: .15em;
+    align-self: stretch;
+    background-color: #999;
+}
+
+.caret {
+    translate: 0 25%;
+    border: .5em solid transparent;
+    border-top-color: #999;
+}
+
+.options {
+    position: absolute;
+    top: calc(100% + .25em);
+    left: -.12em;
+    width: 25em;
+    z-index: 100;
+    list-style: none;
+    background-color: white;
+    border: .15em solid #999;
+    border-radius: .25em;
+    display: none;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: hsl(200, 100%, 70%);
+    color: white;
+}
+
+.option.highlight {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
